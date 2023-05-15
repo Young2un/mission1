@@ -1,99 +1,128 @@
 /* CSS 작성 */
 /* 오늘의발견 */
 
-.wrap {
-    position: relative;
-    top: 0;
-    left: 0;
-    height: 100vh;
-  }
-  
-  .layout {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 1020px;
-    max-height: 90vh;
-    /* border: 1px solid red; */
-  }
-  
-  /* header */
-  .header {
-    margin-bottom: 48px;
-  }
-  
-  .logo a {
-      height: 56px;
-  }
-  /* main */
-  
-  /* section discovery */
-  .discovery {
-  }
-  /* title */
-  
-  .discovery .d-title {
-      margin-bottom: 24px;
-  }
-  .discovery .d-title h2 {
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 1;
-    vertical-align: middle;
-  
-  }
-  .discovery .d-title h2 span {
-    display: inline-block;
-    font-size: 16px;
-    color: gray;
-    line-height: 24px;
-  }
-  
-  .discovery .discovery-wrap {
-    overflow: hidden;
-    /* border: 2px solid black; */
-  }
-  
-  .discovery .discovery-wrap li {
-    float: left;
-  
-    margin: 0 16px 16px 0;
-    /* margin-bottom: 16px; */
-  
-    /* margin-right: 16px; */
-    border: 1px solid gray;
-    width: 243px;
-    height: 310px;
-  }
-  
-  .discovery .discovery-wrap li:hover {
-    border-color: blue;
-  }
-  
-  .discovery .discovery-wrap li:nth-child(2),
-  .discovery .discovery-wrap li:nth-child(6),
-  .discovery .discovery-wrap li:nth-child(9) {
-    margin-right: 0;
-  }
-  
-  .discovery .discovery-wrap li:nth-child(7),
-  .discovery .discovery-wrap li:nth-child(8),
-  .discovery .discovery-wrap li:nth-child(9) {
-    margin-bottom: 0;
-  }
-  
-  .discovery .discovery-wrap li.wide {
-    width: 502px;
-  }
-  
-  .discovery .discovery-wrap li a {
-  }
-  .discovery .discovery-wrap li a img {
-    padding: 14px 22px 14px 21px;
-  }
-  
-  .discovery .discovery-wrap li.wide a img {
-    padding: 20px 28px;
-  }
-  
+body {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 100vh;
+}
+
+.layout {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1020px;
+  max-height: 90vh;
+  /* border: 1px solid red; */
+}
+
+/* header */
+.header {
+  margin-bottom: 48px;
+}
+
+.logo a {
+  height: 56px;
+}
+/* main */
+
+/* section discovery */
+.discovery {
+}
+/* title */
+
+.discovery .d-title {
+  margin-bottom: 24px;
+}
+.discovery .d-title h2 {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1;
+  vertical-align: middle;
+}
+.discovery .d-title h2 span {
+  display: inline-block;
+  font-size: 16px;
+  color: gray;
+  line-height: 24px;
+}
+
+.discovery .discovery-wrap {
+  overflow: hidden;
+  /* border: 2px solid black; */
+}
+
+.discovery .discovery-wrap li {
+  position: relative;
+  float: left;
+  margin: 0 16px 16px 0;
+  border: 1px solid gray;
+  width: 243px;
+  height: 310px;
+}
+
+
+
+.discovery .discovery-wrap li a::after {
+  content: url(../../assets/icon/angle-right-square.svg);
+  position: absolute;
+  display: block;
+  left: 20px;
+  bottom: 20px;
+  width: 42px;
+  height: 42px;
+  background-color: #00000030;
+}
+
+.discovery .discovery-wrap li
+
+:hover,
+.discovery .discovery-wrap li a:focus {
+  border-color: blue;
+  transition: 1s;
+
+}
+
+/* .discovery .discovery-wrap li a:focus{
+  border: 2px solid violet;
+}  */
+
+.discovery .discovery-wrap li:hover a::after {
+  content: "구매하기" url(../../assets/icon/angle-right-square.svg);
+  text-align: center;
+  font-size: 14px;
+  display: block;
+  text-decoration: none;
+  /* line-height: 42px; */
+  color:white;
+  width: 112px;
+  background-color: blue;
+}
+
+.discovery .discovery-wrap li:nth-child(2),
+.discovery .discovery-wrap li:nth-child(6),
+.discovery .discovery-wrap li:nth-child(9) {
+  margin-right: 0;
+}
+
+.discovery .discovery-wrap li:nth-child(7),
+.discovery .discovery-wrap li:nth-child(8),
+.discovery .discovery-wrap li:nth-child(9) {
+  margin-bottom: 0;
+}
+
+.discovery .discovery-wrap li.wide {
+  width: 502px;
+}
+
+.discovery .discovery-wrap li a {
+}
+.discovery .discovery-wrap li a img {
+  padding: 14px 22px 14px 21px;
+}
+
+.discovery .discovery-wrap li.wide a img {
+  padding: 20px 28px;
+}

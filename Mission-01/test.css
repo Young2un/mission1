@@ -1,0 +1,37 @@
+* {
+  box-sizing: border-box;
+  font-family: "Noto Sans KR", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.content {
+  margin: 0 auto;
+  /* max-width: 1020px; */
+}
+
+.list-wrap {
+  overflow: hidden;
+}
+
+.list-wrap .list {
+  float: left;
+  margin-right: 16px;
+  border: 1px solid rebeccapurple;
+}
+.list-wrap .list:nth-child(2){
+    margin-right: 0;
+}
+
+.list-wrap .list a {
+  display: inline-block;
+  padding: 20px 28px;
+}

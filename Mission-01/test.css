@@ -15,7 +15,7 @@ a {
 
 .content {
   margin: 0 auto;
-  /* max-width: 1020px; */
+  max-width: 1020px;
 }
 
 .list-wrap {
@@ -25,13 +25,34 @@ a {
 .list-wrap .list {
   float: left;
   margin-right: 16px;
-  border: 1px solid rebeccapurple;
 }
-.list-wrap .list:nth-child(2){
-    margin-right: 0;
+
+.list-wrap .list:nth-child(2) {
+  margin-right: 0;
 }
 
 .list-wrap .list a {
   display: inline-block;
+  width: 502px;
+  height: 310px;
   padding: 20px 28px;
+  border: 1px solid rebeccapurple;
+}
+
+.list-wrap .list a::before {
+  content: "";
+
+
+}
+
+
+
+.list-wrap .list:hover a {
+  border: 1px solid rgb(28, 0, 237);
+}
+
+/* test */
+.test {
+
+  color:  var(--color-blue-600);
 }

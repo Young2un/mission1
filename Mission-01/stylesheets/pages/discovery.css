@@ -31,22 +31,31 @@ body {
 /* section discovery */
 .discovery {
 }
+
 /* title */
 
 .discovery .d-title {
   margin-bottom: 24px;
 }
 .discovery .d-title h2 {
+  vertical-align: middle;
   font-weight: 500;
   font-size: 24px;
-  line-height: 1;
+  line-height: 24px;
   vertical-align: middle;
 }
-.discovery .d-title h2 span {
-  display: inline-block;
+.discovery .d-title h2 strong {
+  font-weight: 100;
+  color:var(--color-gray-600);
+  text-decoration: none;
+}
+
+.discovery .d-title h2 em {
+  font-style: normal;
   font-size: 16px;
-  color: gray;
+  color:var(--color-gray-600);
   line-height: 24px;
+
 }
 
 .discovery .discovery-wrap {
@@ -76,13 +85,10 @@ body {
   background-color: #00000030;
 }
 
-.discovery .discovery-wrap li
-
-:hover,
-.discovery .discovery-wrap li a:focus {
-  border-color: blue;
-  transition: 1s;
-
+.discovery .discovery-wrap li:hover,
+.discovery .discovery-wrap li:focus {
+  border-color: var(--color-blue-600);
+  transition: 0.5s;
 }
 
 /* .discovery .discovery-wrap li a:focus{
@@ -98,7 +104,7 @@ body {
   /* line-height: 42px; */
   color:white;
   width: 112px;
-  background-color: blue;
+  background-color: var(--color-blue-600);
 }
 
 .discovery .discovery-wrap li:nth-child(2),

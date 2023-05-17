@@ -24,19 +24,27 @@ a {
 
 .list-wrap .list {
   float: left;
-  margin-right: 16px;
+  margin: 0 16px 16px 0;
+  /* margin-right: 16px; */
+  /* margin-bottom: 16px; */
 }
 
-.list-wrap .list:nth-child(2) {
+.list-wrap .list:nth-child(2),
+.list-wrap .list:nth-child(6),
+.list-wrap .list:nth-child(9) {
   margin-right: 0;
 }
 
 .list-wrap .list a {
   display: inline-block;
-  width: 502px;
+  width: 243px;
   height: 310px;
   padding: 20px 28px;
   border: 1px solid rebeccapurple;
+}
+
+.list-wrap .list.wide a{
+    width: 502px;
 }
 
 .list-wrap .list a::before {
@@ -47,7 +55,8 @@ a {
 
 
 
-.list-wrap .list:hover a {
+.list-wrap .list a:hover,
+.list-wrap .list a:focus {
   border: 1px solid rgb(28, 0, 237);
 }
 

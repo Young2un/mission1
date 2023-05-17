@@ -2,20 +2,13 @@
 /* 오늘의발견 */
 
 body {
-  position: relative;
-  top: 0;
-  left: 0;
-  height: 100vh;
+  font-family: 'Noto Sans KR', sans-serif;
+  /* height: 100vh; */
 }
 
 .layout {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  margin: 50px auto;
   width: 1020px;
-  max-height: 90vh;
-  /* border: 1px solid red; */
 }
 
 /* header */
@@ -23,7 +16,12 @@ body {
   margin-bottom: 48px;
 }
 
+.logo {
+  height: 56px;
+}
+
 .logo a {
+  display:inline-block;
   height: 56px;
 }
 /* main */
@@ -38,11 +36,9 @@ body {
   margin-bottom: 24px;
 }
 .discovery .d-title h2 {
-  vertical-align: middle;
   font-weight: 500;
   font-size: 24px;
   line-height: 24px;
-  vertical-align: middle;
 }
 .discovery .d-title h2 strong {
   font-weight: 100;
@@ -52,11 +48,17 @@ body {
 
 .discovery .d-title h2 em {
   font-style: normal;
+  font-weight: 400;
   font-size: 16px;
   color:var(--color-gray-600);
   line-height: 24px;
 
 }
+
+
+/* ----list start----- */
+
+
 
 .discovery .discovery-wrap {
   overflow: hidden;
@@ -67,44 +69,61 @@ body {
   position: relative;
   float: left;
   margin: 0 16px 16px 0;
-  border: 1px solid gray;
+  /* width: 243px; */
+  /* height: 310px; */
+  /* border: 1px solid var(--color-gray-500); */
+
+
+}
+
+.discovery .discovery-wrap li a {
+  display: inline-block;
   width: 243px;
   height: 310px;
+  padding: 14px 22px 14px 21px;
+  border: 1px solid var(--color-gray-500);
 }
 
 
-
 .discovery .discovery-wrap li a::after {
-  content: url(../../assets/icon/angle-right-square.svg);
+  content: "";
+  background-image:url(../../assets/icon/angle-right-square.svg);
+  background-repeat: no-repeat;
   position: absolute;
   display: block;
+  font-family: "Noto Sans KR", sans-serif;
+
   left: 20px;
   bottom: 20px;
   width: 42px;
   height: 42px;
-  background-color: #00000030;
+
+  background-color: var(--color-opacity-20);
+
 }
 
-.discovery .discovery-wrap li:hover,
-.discovery .discovery-wrap li:focus {
+.discovery .discovery-wrap li a:hover,
+.discovery .discovery-wrap li a:focus {
   border-color: var(--color-blue-600);
-  transition: 0.5s;
 }
 
-/* .discovery .discovery-wrap li a:focus{
-  border: 2px solid violet;
-}  */
 
-.discovery .discovery-wrap li:hover a::after {
-  content: "구매하기" url(../../assets/icon/angle-right-square.svg);
+.discovery .discovery-wrap li a:focus::after,
+.discovery .discovery-wrap li a:hover::after {
+  content: '구매하기';
   text-align: center;
+  text-indent: -20px;
   font-size: 14px;
-  display: block;
+  font-weight: 300;
+  outline: none;
+ 
+  background-position: right;
   text-decoration: none;
-  /* line-height: 42px; */
+  line-height: 40px;
   color:white;
   width: 112px;
   background-color: var(--color-blue-600);
+  transition: 0.1s;
 }
 
 .discovery .discovery-wrap li:nth-child(2),
@@ -119,16 +138,7 @@ body {
   margin-bottom: 0;
 }
 
-.discovery .discovery-wrap li.wide {
+.discovery .discovery-wrap li.wide a {
   width: 502px;
-}
-
-.discovery .discovery-wrap li a {
-}
-.discovery .discovery-wrap li a img {
-  padding: 14px 22px 14px 21px;
-}
-
-.discovery .discovery-wrap li.wide a img {
   padding: 20px 28px;
 }

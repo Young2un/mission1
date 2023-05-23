@@ -27,7 +27,9 @@ body {
 /* main */
 
 /* section discovery */
-.discovery {
+.discovery a {
+  outline: var(--color-blue-600);
+
 }
 
 /* title */

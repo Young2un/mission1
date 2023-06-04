@@ -29,6 +29,11 @@ a {
   /* margin-bottom: 16px; */
 }
 
+.list-wrap .list:nth-child(2)~li{
+  background-color: blue;
+}
+
+
 .list-wrap .list:nth-child(2),
 .list-wrap .list:nth-child(6),
 .list-wrap .list:nth-child(9) {

@@ -1,1 +1,151 @@
 /* 헤더 */
+
+.top {
+    background-color: var(--color-gray-100);
+}
+
+.inner {
+    max-width: 1020px;
+    margin: 0 auto;
+}
+
+.loginBar {
+    padding: 5px 0;
+    display: flex;
+}
+
+.loginBar li {
+    font-size: 12px;
+    padding: 5px 4px;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.loginBar li:nth-child(1) {
+    order: 3;
+}
+
+.loginBar li:nth-child(2) {
+    order: 4;
+}
+
+.loginBar li:nth-child(3) {
+    order: 5;
+    margin-right: 4px;
+}
+
+.loginBar li:nth-child(4) {
+    order: 1;
+    margin-left: 4px;
+}
+
+.loginBar li:nth-child(5) {
+    order: 2;
+    margin-right: 740px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 150px 216px 526px 63px 63px;
+    grid-template-rows: 84px 32px;
+    grid-template-areas:
+    "hamburger logo search mypage cart"
+    "hamburger nav nav mypage cart";
+}
+
+
+.grid-container button.button--category {
+    background-image: url("../../assets/icon/hamburger.svg");
+    background-repeat: no-repeat;
+    background-position: 40px 30px;
+    background-color: var(--color-blue-600);
+    color: white;
+    width: 110px;
+    height: 116px;
+    padding-top: 45px;
+    font-size: 12px;
+    grid-area: hamburger;
+}
+
+
+
+.logo {
+    text-indent: -9999px;
+    grid-area: logo;
+
+}
+
+.logo a {
+    display: block;
+    width: 176px;
+    height: 40px;
+    background-image: url("../../assets/logo/logo.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+
+.search {
+
+    padding-top: 34px;
+    grid-area: search;
+
+}
+
+.search form {
+    /* display: flex; */
+    font-size: 1.2rem;
+    height: 40px;
+    border: 1px solid black;
+}
+
+.search form select {
+    appearance: none;
+    width: 100%;
+    border: none;
+    background-image:url('../../assets/icon/MoreDown.svg') ;
+    background-repeat: no-repeat;
+    background-position: 109px center;
+    height: 100%;
+    width: 135px;
+    border-right: 1px solid var(--color-gray-100);
+    outline: none;
+    padding-left: 12px;
+}
+
+
+.search form input[type ="search"] {
+    outline: none;
+    width: 300px;
+    border: none;
+    padding: 0;
+}
+
+
+.myCoupang {
+    grid-area: mypage;
+
+}
+.cart {    
+    grid-area: cart;
+}
+
+
+
+
+
+
+
+
+.nav {
+    grid-area: nav;
+}
+.nav li{
+    display: inline-block;
+}
+.nav li a{
+    display: block;
+    font-size: 1.2rem;
+    padding: 6px 14px;
+}

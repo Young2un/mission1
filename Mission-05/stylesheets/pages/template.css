@@ -39,21 +39,34 @@
 
 .navigation{
   position: relative;
+  visibility: hidden;
+}
+
+.is--active{
+  visibility: visible;
+  /* color: var(--color-blue-600); */
 }
 
 .navigation__inner {
-  background-color: red;
   position: relative;
   margin: 0 auto;
   max-width: 1020px;
 }
-.navigation__inner .navigation__list{
-  
+
+.navigation__inner .navigation__list li{
+  font-size: 1.2rem;
+  /* border: 1px solid black; */
+  height: 30px;
 }
-.navigation__inner .navigation__list li{}
 .navigation__inner .navigation__list li a{
-  display:inline-block;
+  display:block;
 }
+.navigation__inner .navigation__list li a i {
+  width: 16px;
+  height: 16px;
+  font-size: 16px;
+}
+
 .navigation__inner .navigation__list li ul{
   display:inline-block;
 
@@ -68,15 +81,49 @@
   padding: 10px 5px;
   background-color: white;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.depth li a {
+  position: relative;
+  padding: 5px 20px;
+  line-height: 16px;
+}
 
+.depth li a:hover ,
+.depth li a.is--active {
+    color : var(--color-blue-600);
+  font-weight: 700;
+}
+
+/* .depth li a:hover::after, */
+.depth li a.is--active::after{
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 12px;
+  background-image: url("../../assets/icon/more-right-active.svg");
+  background-repeat:no-repeat;
+  background-position:  center;
+}
+
+
+.depth2 , .depth3{
+  visibility: hidden;
+}
+
+.depth2.is--active,
+.depth3.is--active {
+  visibility: visible;
 }
 
 .navigation__list.depth {
   left: 0;
 }
-.depth li a {
-  padding: 5px 20px;
-}
+
+
 
 /* ---------------------------------------------- */
 /* 메인 콘텐츠                                       */
@@ -165,32 +212,41 @@
   font-weight: 600;
   border-right: 1px solid #4E4E4E;
   padding-right: 12px;
+  margin-right: 10px;
 }
-.CoupangInformation .CustomerCenter em{
+.CoupangInformation .CustomerCenter a:nth-child(3){
   display: block;
-  font-style: normal;
   font-size: 4.0rem;
   font-weight: 900;
   margin-top: 8px;
   margin-bottom: 12px;
 }
+
+
 .CoupangInformation .CustomerCenter address{
   font-style: normal;
+  margin-bottom: 8px;
 }
-.CoupangInformation div p{
-  margin-top: 8px;
-}
+
+
 
 .CoupangInformation .PaymentGuarantee{
   width: 282px;
 }
 
-
+.CoupangInformation .PaymentGuarantee p{
+  margin-top: 8px;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 19.2px;
+}
 .CopyrightSNS {
   background-color: var(--color-gray-900);
 }
 .CopyrightSNS .inner {
   display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
   padding: 16px 0;
 }
 .CopyrightSNS .copyright{
@@ -198,6 +254,16 @@
   line-height: 1.2;
   font-weight: 100;
   color: var(--color-gray-200);
+}
+.SNS a:nth-child(2) {
+  margin: 0 10px;
+}
+
+.SNS a:last-child img {
+  text-align: center;
+  border-radius: 50%;
+  line-height: 1;
+  background: linear-gradient(174.12deg, #285AEB 5.61%, #BC1888 22.32%, #CC2366 36.16%, #DC2743 51.91%, #E6683C 73.38%, #F09433 91.99%);
 }
 
 

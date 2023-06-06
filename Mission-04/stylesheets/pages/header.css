@@ -1,5 +1,12 @@
 /* 헤더 */
 
+header {
+    max-width: 1920px;
+    margin: 0 auto;
+    border-bottom: 1px solid var(--color-gray-100);
+}
+
+
 .top {
     background-color: var(--color-gray-100);
 }
@@ -8,6 +15,8 @@
     max-width: 1020px;
     margin: 0 auto;
 }
+
+
 
 .loginBar {
     padding: 5px 0;
@@ -46,11 +55,11 @@
 
 .grid-container {
     display: grid;
-    grid-template-columns: 150px 216px 526px 63px 63px;
+    grid-template-columns: 150px 216px 554px 50px 45px;
     grid-template-rows: 84px 32px;
     grid-template-areas:
-    "hamburger logo search mypage cart"
-    "hamburger nav nav mypage cart";
+        "hamburger logo search mypage cart"
+        "hamburger nav nav mypage cart";
 }
 
 
@@ -67,12 +76,9 @@
     grid-area: hamburger;
 }
 
-
-
 .logo {
     text-indent: -9999px;
     grid-area: logo;
-
 }
 
 .logo a {
@@ -82,70 +88,189 @@
     background-image: url("../../assets/logo/logo.svg");
     background-repeat: no-repeat;
     background-size: cover;
-
 }
 
 
 .search {
-
     padding-top: 34px;
     grid-area: search;
-
 }
 
 .search form {
-    /* display: flex; */
+    display: flex;
     font-size: 1.2rem;
+    width: 516px;
     height: 40px;
-    border: 1px solid black;
+    overflow: hidden;
+    border: 1px solid var(--color-blue-600);
 }
 
-.search form select {
-    appearance: none;
-    width: 100%;
-    border: none;
-    background-image:url('../../assets/icon/MoreDown.svg') ;
-    background-repeat: no-repeat;
-    background-position: 109px center;
+.search form .select-con  {
+    display: flex;
+   justify-content: space-between;
     height: 100%;
     width: 135px;
     border-right: 1px solid var(--color-gray-100);
+  
+ 
+}
+
+.search form .select-con select {
+    appearance: none;
     outline: none;
+    border: none;
+    width: 100%;
     padding-left: 12px;
 }
 
-
-.search form input[type ="search"] {
+.search form input[type="search"] {
     outline: none;
     width: 300px;
     border: none;
     padding: 0;
+    padding-left: 12px;
 }
 
+.search form button {
+    width: 40px;
+    height: 40px;
+}
 
 .myCoupang {
+    /* text-align: center; */
     grid-area: mypage;
-
 }
-.cart {    
+
+.user-btn {
+    font-size: 1.2rem;
+    position: relative;
+}
+
+
+.user-btn button{
+    width: 45px;
+    height: 54px;
+    margin-top: 29px;
+    padding-top: 37px;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position: center 7px;
+}
+
+.myCoupang button {
+    background-image: url("../../assets/icon/my-coupang.svg");
+}
+
+.myCoupang ul {
+    visibility: hidden;
+    position: relative;
+    top: 5px;
+    width: 90px;
+    height: 130px;
+    background-color: white;
+    border: 1px solid #C4C4C4;
+    padding: 24px 0 0 20px;
+    text-align: left;
+    transform: translate(-15px, 0);
+}
+
+.myCoupang.is--active ul{
+    visibility: visible;
+}
+
+.myCoupang ul::before {
+    content: " ";
+    width: 10px;
+    height: 10px;
+    background-color:white;
+    border: 1px solid #C4C4C4;
+    border-width: 1px 0 0 1px;
+    position: absolute;
+    top: -6px;
+    left: 50%;
+    transform:translateX(-50%) rotate(45deg);
+}
+
+.myCoupang ul li {
+    margin-bottom:20px ;
+}
+
+.cart {
     grid-area: cart;
 }
+.cart button {
+    position: relative;
+    background-image: url("../../assets/icon/cart.svg");
+}
+.cart .count {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    color: white;
+    text-align: center;
+    line-height: 18px;
+    background-color: var(--color-blue-600);
+}
 
+.cart .tooltip::before {
+    content: " ";
+    width: 10px;
+    height: 10px;
+    background-color:white;
+    border: 1px solid #C4C4C4;
+    border-width: 1px 0 0 1px;
+    position: absolute;
+    position: absolute;
+    top: -6px;
+   right: 7px;
+   transform: rotate(45deg);
+}
 
+.cart.cart--empty .tooltip {
+    visibility: visible;
+}
 
-
-
-
-
+.cart .tooltip {
+    visibility: hidden;
+    position: absolute;
+    top: 90px;;
+    right: 0;
+    line-height: 99px;
+    width: 288px;
+    height: 99px;
+    text-align: center;
+    background-color: white;
+    border: 1px solid #C4C4C4;
+}
 
 .nav {
     grid-area: nav;
 }
-.nav li{
+
+.nav li {
     display: inline-block;
+    margin-right: 2px;
 }
-.nav li a{
+
+.nav li:last-child {
+    margin-left: 0;
+}
+
+.nav li a {
     display: block;
     font-size: 1.2rem;
     padding: 6px 14px;
 }
+
+.nav li a img {
+    margin-right: 4px;
+}
+.nav li:nth-child(3) a img {
+    margin-left: 2px;
+    margin-right: 0;
+    margin-bottom: 2px;
+}
+

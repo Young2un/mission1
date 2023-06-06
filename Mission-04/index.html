@@ -30,7 +30,7 @@
       </div>
     </div>
 
-    <section class="headMain">
+    <section>
       <div class="inner">
         <div class="grid-container">
           <button class="button--category">
@@ -42,25 +42,45 @@
             </a>
           </h1>
           <div class="search">
-
             <form action="">
-              <select name="category-select" id="">
-                <option value="">전체</option>
-              </select>
+              <div class="select-con">
+                <select name="category-select" id="select">
+                  <option value="">전체</option>
+                  <option value="">전체</option>
+                  <option value="">전체</option>
+                  <option value="">전체</option>
+                  <option value="">전체</option>
+                  <option value="">전체</option>
+                </select>
+                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M24 17H15L19.6957 23L24 17Z" fill="#767676"/>
+                    </svg>
+              </div>
+              
               <input type="search" name="" id="" placeholder="찾고싶은 상품을 검색해 보세요!">
-              <input type="button">
-              <input type="button">
+              <button><img src="./assets/icon/mic.svg" alt=""></button>
+              <button><img src="./assets/icon/search.svg" alt=""></button>
             </form>
 
 
           </div>
-          <div class="myCoupang">마이쿠팡</div>
-          <div class="cart">
-            <button>장바구니</button>
-            <!-- 카트 아이콘은 추후 CSS의 배경이미지 -->
+          <div class="myCoupang user-btn">
+            <button>마이쿠팡</button>
+            <ul>
+              <li><a href="/">주문목록</a></li>
+              <li><a href="/">주소/반품</a></li>
+              <li><a href="/">찜리스트</a></li>
+            </ul>
           </div>
+          <div class="cart user-btn">
+            <button>장바구니
+              <div class="count">0</div>
+            </button>
+            <div class="tooltip">
+              장바구니에 담긴 상품이 없습니다.
+            </div>
 
-     
+          </div>
           <ul class="nav">
             <li><a href=""><img src="./assets/icon/icon-rocket.svg" alt="로켓배송">로켓배송</a></li>
             <li><a href=""><img src="./assets/icon/icon-fresh.svg" alt="로켓배송">로켓프레시</a></li>
@@ -75,13 +95,7 @@
         </div>
       </div>
     </section>
-
-
-
-
-
   </header>
-
 </body>
 
 </html>
